@@ -7,12 +7,16 @@ interface Particle {
     size: number;
     speedX: number;
     speedY: number;
+    brightness: number;
+    color: string;
+    twinkleSpeed: number;
 }
 
 const StarCanvas: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const offsetRef = useRef({ x: 0, y: 0 });
     const targetOffsetRef = useRef({ x: 0, y: 0 });
+    const particlesRef = useRef<Particle[]>([]);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -23,28 +27,38 @@ const StarCanvas: React.FC = () => {
 
         let animationFrameId: number;
 
+        const calculateParticleCount = () => {
+            const area = window.innerWidth * window.innerHeight;
+            return Math.floor(area / 8000);
+        };
+
+        const initializeParticles = () => {
+            const particleCount = calculateParticleCount();
+            particlesRef.current = Array.from(
+                { length: particleCount },
+                () => ({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 1.2,
+                    speedX: Math.random() * 0.8 - 0.4,
+                    speedY: Math.random() * 0.8 - 0.4,
+                    brightness: Math.random() * 0.5 + 0.5,
+                    color: `hsl(${Math.random() * 60 + 200}, 100%, 90%)`,
+                    twinkleSpeed: Math.random() * 0.02 + 0.01,
+                })
+            );
+        };
+
         const resizeCanvas = () => {
             if (canvas) {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
+                initializeParticles();
             }
         };
 
         window.addEventListener("resize", resizeCanvas);
         resizeCanvas();
-
-        const particles: Particle[] = [];
-        const particleCount = 130;
-
-        for (let i = 0; i < particleCount; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                size: Math.random() * 0.5 + 0.2, // 별의 크기를 약간 증가
-                speedX: Math.random() * 1 - 0.5, // 속도를 줄임
-                speedY: Math.random() * 1 - 0.5, // 속도를 줄임
-            });
-        }
 
         let mouseX = canvas.width / 2;
         let mouseY = canvas.height / 2;
@@ -83,20 +97,27 @@ const StarCanvas: React.FC = () => {
                 0.1
             );
 
-            particles.forEach((particle) => {
+            particlesRef.current.forEach((particle, index) => {
+                const depth = index / particlesRef.current.length;
+                const parallaxX = offsetRef.current.x * depth;
+                const parallaxY = offsetRef.current.y * depth;
+
                 particle.x += particle.speedX;
                 particle.y += particle.speedY;
+                particle.brightness =
+                    Math.sin(Date.now() * particle.twinkleSpeed) * 0.3 + 0.7;
 
                 const adjustedX =
-                    (particle.x + offsetRef.current.x + boundaryX) %
-                    canvas.width;
+                    (particle.x + parallaxX + boundaryX) % canvas.width;
                 const adjustedY =
-                    (particle.y + offsetRef.current.y + boundaryY) %
-                    canvas.height;
+                    (particle.y + parallaxY + boundaryY) % canvas.height;
 
                 ctx.beginPath();
+                ctx.shadowBlur = particle.size * 2;
+                ctx.shadowColor = particle.color;
                 ctx.arc(adjustedX, adjustedY, particle.size, 0, Math.PI * 2);
-                ctx.fillStyle = "rgba(255, 255, 255, 0.8)"; // 밝기를 높임
+                ctx.fillStyle = particle.color;
+                ctx.globalAlpha = particle.brightness;
                 ctx.fill();
             });
 
@@ -112,7 +133,9 @@ const StarCanvas: React.FC = () => {
         };
     }, []);
 
-    return <canvas ref={canvasRef} />;
+    return (
+        <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full" />
+    );
 };
 
 export default StarCanvas;
