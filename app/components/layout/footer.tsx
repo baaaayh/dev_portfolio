@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className={styles["footer"]}>
             <div className={styles["footer__inner"]}>
                 <div className={styles["footer__top"]}>
-                    <h2>BAAAAYH</h2>
+                    <h2>Baaaayh</h2>
                     <p>
                         Driven by Passion,
                         <br />
@@ -13,7 +13,9 @@ export default function Footer() {
                     </p>
                 </div>
                 <div className={styles["footer__bottom"]}>
-                    <div className={styles["footer__left"]}>© 2024 BAAAAYH</div>
+                    <div className={styles["footer__left"]}>
+                        © 2024 Baaaayh All Rights Reserved.
+                    </div>
                     <div className={styles["footer__right"]}>
                         <ul>
                             <li>

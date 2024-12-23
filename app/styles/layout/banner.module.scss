@@ -4,11 +4,11 @@
     z-index: 1;
 
     &__inner {
-        opacity: 0.4;
+        opacity: 0.6;
         overflow: hidden;
         position: relative;
         width: 100%;
-        height: 200px;
+        height: 230px;
         margin: 0 auto;
         text-align: center;
         &::after {
@@ -22,7 +22,7 @@
             background: linear-gradient(
                 90deg,
                 #0000,
-                #333 50%,
+                #333 20%,
                 #333 80%,
                 #0000
             );
@@ -31,8 +31,28 @@
     }
 
     &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         font-size: 300px;
         color: transparent;
         line-height: 1;
+        &--stroke {
+            background: radial-gradient(circle at 50% 50%, #fff, #000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 2px #fff;
+        }
+        &--bg {
+            background: radial-gradient(
+                circle at 50% 50%,
+                #fff,
+                #000
+            ); /* 기본 투명 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }

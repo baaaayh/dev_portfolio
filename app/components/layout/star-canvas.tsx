@@ -51,8 +51,15 @@ const StarCanvas: React.FC = () => {
 
         const resizeCanvas = () => {
             if (canvas) {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+                const width = document.documentElement.clientWidth; // 스크롤바 제외 너비
+                const height = document.documentElement.clientHeight; // 스크롤바 제외 높이
+
+                canvas.width = width;
+                canvas.height = height;
+
+                canvas.style.width = `${width}px`;
+                canvas.style.height = `${height}px`;
+
                 initializeParticles();
             }
         };

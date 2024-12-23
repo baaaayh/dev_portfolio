@@ -47,6 +47,14 @@ export default function KV() {
                                     target="_blank"
                                 >
                                     Source Code
+                                    <Image
+                                        src={
+                                            "/images/icons/icon_arrow_black.svg"
+                                        }
+                                        width={18}
+                                        height={18}
+                                        alt="Source Code"
+                                    />
                                 </a>
                             </li>
                             <li>
@@ -56,6 +64,14 @@ export default function KV() {
                                     target="_blank"
                                 >
                                     Prev Portfolio
+                                    <Image
+                                        src={
+                                            "/images/icons/icon_arrow_white.svg"
+                                        }
+                                        width={18}
+                                        height={18}
+                                        alt="Source Code"
+                                    />
                                 </a>
                             </li>
                         </ul>
