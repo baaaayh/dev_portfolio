@@ -1,8 +1,12 @@
+import ScrollContainer from "./components/layout/scroll-container";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import Header from "@/app/components/layout/header";
+import Banner from "@/app/components/layout/banner";
+import Footer from "@/app/components/layout/footer";
 import StarCanvas from "@/app/components/layout/star-canvas";
+
 import "@/app/styles/globals.scss";
 
 const pretendard = localFont({
@@ -24,11 +28,15 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ko">
-            <body className={`${GeistSans} ${pretendard}`}>
+            <body className={`${GeistSans.variable} ${pretendard.variable}`}>
                 <StarCanvas />
                 <div className="wrap">
                     <Header />
-                    <div className="container">{children}</div>
+                    <div className="container">
+                        <ScrollContainer>{children}</ScrollContainer>
+                    </div>
+                    <Banner />
+                    <Footer />
                 </div>
             </body>
         </html>

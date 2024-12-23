@@ -1,4 +1,5 @@
 import KV from "@/app/components/main/kv";
+import Project from "@/app/components/main/project";
 import styles from "@/app/styles/page.module.scss";
 
 export default function Home() {
@@ -11,13 +12,7 @@ export default function Home() {
             </section>
             <section className={"section section--contents"}>
                 <div className={"section__inner"}>
-                    <div className={"section-title"}>
-                        <h2>Project</h2>
-                        <small>
-                            도전과 학습을 통해 얻은 경험을 바탕으로
-                            만들어졌습니다.
-                        </small>
-                    </div>
+                    <Project />
                 </div>
             </section>
         </main>

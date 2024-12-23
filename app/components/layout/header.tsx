@@ -118,7 +118,7 @@ export default function Header() {
                 <div className={styles["link"]}>
                     <ul>
                         <li>
-                            <Link href="/">
+                            <a href="/" target="_blank">
                                 Github
                                 <Image
                                     src="/images/icons/icon_link.svg"
@@ -126,10 +126,10 @@ export default function Header() {
                                     height={18}
                                     alt="Github"
                                 />
-                            </Link>
+                            </a>
                         </li>
                         <li>
-                            <Link href="/">
+                            <a href="/" target="_blank">
                                 Publishing
                                 <Image
                                     src="/images/icons/icon_link.svg"
@@ -137,7 +137,7 @@ export default function Header() {
                                     height={18}
                                     alt="Publising"
                                 />
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>
