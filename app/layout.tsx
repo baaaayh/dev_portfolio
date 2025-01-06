@@ -5,7 +5,6 @@ import { GeistSans } from "geist/font/sans";
 import Header from "@/app/components/layout/header";
 import Banner from "@/app/components/layout/banner";
 import Footer from "@/app/components/layout/footer";
-import StarCanvas from "@/app/components/layout/star-canvas";
 
 import "@/app/styles/globals.scss";
 
@@ -29,7 +28,6 @@ export default function RootLayout({
     return (
         <html lang="ko">
             <body className={`${GeistSans.variable} ${pretendard.variable}`}>
-                <StarCanvas />
                 <div className="wrap">
                     <Header />
                     <div className="container">

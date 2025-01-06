@@ -14,7 +14,8 @@ export default function Footer() {
                 </div>
                 <div className={styles["footer__bottom"]}>
                     <div className={styles["footer__left"]}>
-                        © 2024 Baaaayh All Rights Reserved.
+                        <p>© 2024 Baaaayh All Rights Reserved.</p>
+                        <a href="mailto:baaaayh@gmail.com">baaaayh@gmail.com</a>
                     </div>
                     <div className={styles["footer__right"]}>
                         <ul>

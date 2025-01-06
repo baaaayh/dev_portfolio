@@ -19,6 +19,10 @@
     }
 }
 
+.tac {
+    text-align: center;
+}
+
 html,
 body {
     background-color: #000;
@@ -103,4 +107,23 @@ img {
         font-weight: 300;
         color: #dedede;
     }
+}
+
+.sub-layout {
+    padding: 200px 0px 120px;
+    background-image: radial-gradient(
+        circle farthest-side at 50% 0,
+        #303030,
+        #0000
+    );
+    &__inner {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
+
+.btn-wrap {
+    margin-top: 80px;
 }

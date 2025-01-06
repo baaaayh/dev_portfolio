@@ -12,6 +12,7 @@ export default function Header() {
     const glowEl = useRef<HTMLSpanElement>(null);
     const bgEl = useRef<HTMLSpanElement>(null);
     const bottomEl = useRef<HTMLSpanElement>(null);
+
     const activeNav = useCallback(() => {
         const parent = navInner.current;
         const lightEl = glowEl.current;
@@ -20,7 +21,8 @@ export default function Header() {
 
         // 활성화된 링크 찾기
         const targetIndex = navButtons.current.findIndex(
-            (btn) => btn?.getAttribute("href") === pathname
+            (btn) =>
+                btn?.getAttribute("href") === pathname || pathname !== "/about"
         );
 
         // 활성화된 링크와 관련 DOM 조작
@@ -68,7 +70,7 @@ export default function Header() {
                 <h1 className={styles["header__logo"]}>
                     <Link href="/">
                         <strong className={styles["header__name"]}>
-                            BAAAAYH
+                            Baaaayh
                         </strong>
                     </Link>
                 </h1>

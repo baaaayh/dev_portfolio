@@ -1,0 +1,30 @@
+[
+    {
+        "id": "danoshop",
+        "idx": 0,
+        "imageUrl": "/images/projects/dano_shop.png",
+        "title": "DANO SHOP",
+        "type": ["반응형", "클론코딩"],
+        "description": "리액트와 Node.js, MongoDB를 사용해 제작했고, 라즈베리파이를 사용해 외부에서도 해당 작업물에 접근 가능한 환경을 만들었습니다. 장바구니, 회원가입 및 로그인, 주문 조회, 최근 본 상품, 결제 페이지 등을 구현했습니다. 리액트를 공부하고 처음 만들어 본 작업물이어서 어려움도 많았고 모르는 것도 많았지만 리액트와 자바스크립트에 대해서 조금 더 깊이 알 수 있는 작업물이었습니다.",
+        "url": "http://baaaayh.sytes.net",
+        "github": "https://github.com/baaaayh/danoshop",
+        "workers": 1,
+        "period": "21일",
+        "contribution": "100%",
+        "tools": ["React.js", "Node.js", "MongoDB", "Redux"]
+    },
+    {
+        "id": "simpleboard",
+        "idx": 1,
+        "imageUrl": "/images/projects/simple_board.png",
+        "title": "SIMPLE BOARD",
+        "type": ["반응형"],
+        "description": "Next.js와 TypeScript를 사용해 CRUD가 가능한 간단한 게시판을 만들었습니다. 리액트에 이어 Next와 타입스크립트를 공부하며 만들었고, 글쓰기 기능에 들어간 에디터를 추가하는 과정에서 해당 에디터에 대한 설명이 많이 부족하여 어려움이 있었지만, 서치와 ai를 활용해 글쓰기 기능까지 완성할 수 있었습니다. 이번 작업물에서는 mongoDB 대신 postgreSQL을 사용하여 제작해 SQL을 연습해볼 수 있었습니다.",
+        "url": "http://baaaayh.sytes.net:3000",
+        "github": "https://github.com/baaaayh/simple-board",
+        "workers": 1,
+        "period": "3일",
+        "contribution": "100%",
+        "tools": ["Next.js", "TypeScript", "postgreSQL", "auth.js"]
+    }
+]
