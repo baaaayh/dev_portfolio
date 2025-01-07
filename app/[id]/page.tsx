@@ -41,13 +41,13 @@ export default function DetailPage() {
                     <ul>
                         <li>
                             <h4>Description</h4>
-                            <div className={styles["detail_content"]}>
+                            <div className={styles["detail__content"]}>
                                 <p>{project.description}</p>
                             </div>
                         </li>
                         <li>
                             <h4>URL</h4>
-                            <div className={styles["detail_content"]}>
+                            <div className={styles["detail__content"]}>
                                 <a href={project.url} target="_blank">
                                     {project.url}
                                     <Image
@@ -61,7 +61,7 @@ export default function DetailPage() {
                         </li>
                         <li>
                             <h4>Code</h4>
-                            <div className={styles["detail_content"]}>
+                            <div className={styles["detail__content"]}>
                                 <a href={project.github} target="_blank">
                                     {project.github}
                                     <Image
@@ -75,25 +75,25 @@ export default function DetailPage() {
                         </li>
                         <li>
                             <h4>Workers</h4>
-                            <div className={styles["detail_content"]}>
+                            <div className={styles["detail__content"]}>
                                 <p>{project.workers}</p>
                             </div>
                         </li>
                         <li>
                             <h4>period</h4>
-                            <div className={styles["detail_content"]}>
+                            <div className={styles["detail__content"]}>
                                 <p>{project.period}</p>
                             </div>
                         </li>
                         <li>
                             <h4>Contribution</h4>
-                            <div className={styles["detail_content"]}>
+                            <div className={styles["detail__content"]}>
                                 <p>{project.contribution}</p>
                             </div>
                         </li>
                         <li>
                             <h4>Tools</h4>
-                            <div className={styles["detail_content"]}>
+                            <div className={styles["detail__content"]}>
                                 <p>
                                     {project.tools.map((t) => (
                                         <span key={t}>{t}</span>

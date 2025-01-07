@@ -19,8 +19,7 @@ export default function AboutPage() {
                     </div>
                     <div className={styles["about__text"]}>
                         <h2>
-                            책임감, 끈기, 발전하고 있는
-                            <br />
+                            책임감, 끈기, 발전하고 있는 <br />
                             프론트엔드 개발자 김주형.
                         </h2>
                         <p>

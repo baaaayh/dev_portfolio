@@ -13,6 +13,7 @@ export default function Header() {
     const glowEl = useRef<HTMLSpanElement>(null);
     const bgEl = useRef<HTMLSpanElement>(null);
     const bottomEl = useRef<HTMLSpanElement>(null);
+    const mobileMenuButton = useRef<HTMLButtonElement>(null);
     const [mobileMenuState, setMobileMenuState] = useState<boolean>(false);
 
     const activeNav = useCallback(() => {
@@ -66,18 +67,35 @@ export default function Header() {
         activeNav();
     }, [activeNav]);
 
-    const handleMobileMenu = useCallback(
-        (e: React.MouseEvent<HTMLButtonElement>) => {
-            const button = e.currentTarget;
-            button.classList.toggle("active");
-            if (button.classList.contains("active")) {
-                setMobileMenuState(true);
-            } else {
+    useEffect(() => {
+        if (mobileMenuButton.current) {
+            mobileMenuButton.current.addEventListener("click", function () {
+                this.classList.toggle("active");
+                if (this.classList.contains("active")) {
+                    setMobileMenuState(true);
+                } else {
+                    setMobileMenuState(false);
+                }
+            });
+        }
+    }, []);
+
+    useEffect(() => {
+        document.addEventListener("click", function (e) {
+            const $t = e.target as HTMLElement;
+            if (!$t.closest(`.${styles["header"]}`)) {
                 setMobileMenuState(false);
+                if (mobileMenuButton.current)
+                    mobileMenuButton.current.classList.remove("active");
             }
-        },
-        []
-    );
+        });
+    }, [setMobileMenuState]);
+
+    useEffect(() => {
+        setMobileMenuState(false);
+        if (mobileMenuButton.current)
+            mobileMenuButton.current.classList.remove("active");
+    }, [pathname, setMobileMenuState]);
 
     return (
         <header className={styles["header"]}>
@@ -166,7 +184,7 @@ export default function Header() {
                 </div>
                 <MobileMenu mobileMenuState={mobileMenuState} />
                 <div className="mob-menu mov">
-                    <button type="button" onClick={handleMobileMenu}>
+                    <button type="button" ref={mobileMenuButton}>
                         <span>MOBILE MENU</span>
                     </button>
                 </div>

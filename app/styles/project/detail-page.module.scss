@@ -22,7 +22,7 @@
             top: -1px;
             height: 1px;
             display: inline-block;
-            width: 100%;
+            width: 80%;
             background-image: linear-gradient(
                 to right,
                 #0000 5%,
@@ -100,7 +100,6 @@
                     color: #fff;
                 }
                 p {
-                    margin-top: 15px;
                     font-size: 18px;
                     font-weight: 200;
                     color: #dedede;
@@ -121,7 +120,6 @@
                     }
                 }
                 a {
-                    margin-top: 15px;
                     display: inline-block;
                     font-size: 16px;
                     font-weight: 200;
@@ -153,6 +151,101 @@
             &:last-child {
                 margin-right: 0;
             }
+        }
+    }
+    &__content {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .detail {
+        &__title {
+            font-size: 46px;
+        }
+        &__figure {
+            margin-top: 40px;
+        }
+        &__info {
+            margin-top: 80px;
+            padding: 0 15px;
+        }
+        &__left {
+            h3 {
+                font-size: 42px;
+            }
+        }
+        &__tag {
+            margin-top: 14px;
+        }
+        &__right {
+            margin-top: 40px;
+            ul {
+                li {
+                    h4 {
+                        font-size: 28px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &__content {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .detail {
+        &__title {
+            font-size: 28px;
+        }
+        &__figure {
+            padding: 15px;
+            border-radius: 30px;
+        }
+        &__inner {
+            padding: 7px;
+            border-radius: 15px;
+            &::before {
+                top: -14px;
+            }
+            &::after {
+                top: -11px;
+            }
+        }
+        &__info {
+            margin-top: 40px;
+        }
+        &__left {
+            h3 {
+                font-size: 22px;
+            }
+        }
+        &__tag {
+            span {
+                padding: 0 10px;
+                font-size: 12px;
+            }
+        }
+        &__right {
+            margin-top: 20px;
+            ul {
+                row-gap: 30px;
+                li {
+                    h4 {
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        &__content {
+            margin-top: 5px;
         }
     }
 }

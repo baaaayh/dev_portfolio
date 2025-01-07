@@ -90,3 +90,95 @@
         }
     }
 }
+
+@media screen and (max-width: 1280px) {
+    .about {
+        &__intro {
+            column-gap: 60px;
+        }
+        &__text {
+            h2 {
+                font-size: 34px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        &__row {
+            h2 {
+                font-size: 32px;
+            }
+        }
+        &__list {
+            ul {
+                row-gap: 40px;
+                li {
+                    strong {
+                        font-size: 22px;
+                    }
+                    span {
+                        font-size: 14px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        &__intro {
+            display: block;
+        }
+        &__figure {
+            display: inline-block;
+            max-width: 150px;
+        }
+        &__text {
+            margin-top: 30px;
+            h2 {
+                font-size: 32px;
+                br {
+                    display: none;
+                }
+            }
+            p {
+                margin-top: 15px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        &__row {
+            flex-direction: column;
+            row-gap: 60px;
+        }
+        &__list {
+            ul {
+                li {
+                    span {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        &__text {
+            h2 {
+                br {
+                    display: block;
+                }
+            }
+        }
+    }
+}

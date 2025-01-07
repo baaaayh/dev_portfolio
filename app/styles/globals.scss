@@ -162,6 +162,9 @@ img {
             font-size: 16px;
         }
     }
+    .sub-layout {
+        padding: 120px 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -192,5 +195,15 @@ img {
             margin-top: 10px;
             font-size: 14px;
         }
+    }
+
+    .sub-layout {
+        padding: 80px 0 60px;
+    }
+    .sub-title {
+        font-size: 32px;
+    }
+    .btn-wrap {
+        margin-top: 40px;
     }
 }
