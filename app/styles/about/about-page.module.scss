@@ -106,7 +106,7 @@
         }
         &__row {
             h2 {
-                font-size: 32px;
+                font-size: 30px;
             }
         }
         &__list {
@@ -140,7 +140,7 @@
         &__text {
             margin-top: 30px;
             h2 {
-                font-size: 32px;
+                font-size: 30px;
                 br {
                     display: none;
                 }
@@ -177,6 +177,19 @@
             h2 {
                 br {
                     display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .about {
+        &__text {
+            h2 {
+                text-wrap: balance;
+                br {
+                    display: none;
                 }
             }
         }
