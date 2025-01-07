@@ -12,22 +12,27 @@ export default function KV() {
                             <div
                                 className={`${styles["kv__title"]} ${styles["kv__title--01"]}`}
                             >
-                                Driven by Passion,
+                                Driven by <br className="mov" />
+                                Passion,
                             </div>
                             <div
                                 className={`${styles["kv__title"]} ${styles["kv__title--02"]}`}
                             >
-                                Powered by Javascript.
+                                Powered by <br className="mov" />
+                                Javascript.
                             </div>
                         </h2>
                     </div>
                     <div className={styles["kv__desc"]}>
                         <h3>
-                            책임감과 끈기가 장점인 프론트엔드 개발자{" "}
-                            <strong>김 주 형</strong> 입니다.
-                            <br />
-                            문제와 직면하더라도 <strong>열정</strong>과{" "}
-                            <strong>끈기</strong>로 해결해 나갑니다.
+                            <div>
+                                책임감과 끈기가 장점인 프론트엔드 개발자{" "}
+                                <strong>김 주 형</strong> 입니다.
+                            </div>
+                            <div>
+                                문제와 직면하더라도 <strong>열정</strong>과{" "}
+                                <strong>끈기</strong>로 해결해 나갑니다.
+                            </div>
                         </h3>
                     </div>
                     <div className={styles["kv__skills"]}>

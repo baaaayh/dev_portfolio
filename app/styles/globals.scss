@@ -131,3 +131,66 @@ img {
 .btn-wrap {
     margin-top: 80px;
 }
+
+.pcv {
+    display: block;
+}
+
+.mov {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    .section {
+        &--kv {
+            position: relative;
+            height: auto;
+            padding-top: 70px;
+        }
+        &--contents {
+            .section__inner {
+                padding: 100px 20px;
+            }
+        }
+    }
+    .section-title {
+        margin-bottom: 60px;
+        h2 {
+            font-size: 42px;
+        }
+        small {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pcv {
+        display: none;
+    }
+    .mov {
+        display: block;
+    }
+
+    .section {
+        &__inner {
+            padding: 0 15px;
+        }
+        &--contents {
+            .section__inner {
+                padding: 80px 15px;
+            }
+        }
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+        h2 {
+            font-size: 28px;
+        }
+        small {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+}

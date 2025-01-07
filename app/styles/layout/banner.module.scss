@@ -56,3 +56,19 @@
         }
     }
 }
+
+@media screen and (max-width: 1800px) {
+    .banner {
+        &__inner {
+            height: 14vw;
+        }
+        svg {
+            position: relative;
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+}

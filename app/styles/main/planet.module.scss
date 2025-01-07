@@ -18,12 +18,33 @@
         top: 100%;
         flex: none;
         width: 160%;
-        height: 1000px;
+        height: 160vw;
         margin-top: -300px;
         background: radial-gradient(64.4% 50%, #000 72%, #5e5e5e 100%);
         border-radius: 100%;
         box-shadow: 0 0 150px #fff9;
         z-index: 1;
         pointer-events: none;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .planet {
+        margin-top: auto;
+        top: auto;
+        bottom: -20vw;
+        &__circle {
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .planet {
+        margin-top: auto;
+        top: 100%;
+        bottom: auto;
+        margin-top: -300px;
+        &__circle {
+        }
     }
 }

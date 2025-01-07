@@ -1,6 +1,7 @@
 "use client";
+import MobileMenu from "@/app/components/layout/mobile-menu";
 import Image from "next/image";
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "@/app/styles/layout/header.module.scss";
@@ -12,6 +13,7 @@ export default function Header() {
     const glowEl = useRef<HTMLSpanElement>(null);
     const bgEl = useRef<HTMLSpanElement>(null);
     const bottomEl = useRef<HTMLSpanElement>(null);
+    const [mobileMenuState, setMobileMenuState] = useState<boolean>(false);
 
     const activeNav = useCallback(() => {
         const parent = navInner.current;
@@ -63,6 +65,19 @@ export default function Header() {
     useEffect(() => {
         activeNav();
     }, [activeNav]);
+
+    const handleMobileMenu = useCallback(
+        (e: React.MouseEvent<HTMLButtonElement>) => {
+            const button = e.currentTarget;
+            button.classList.toggle("active");
+            if (button.classList.contains("active")) {
+                setMobileMenuState(true);
+            } else {
+                setMobileMenuState(false);
+            }
+        },
+        []
+    );
 
     return (
         <header className={styles["header"]}>
@@ -120,7 +135,10 @@ export default function Header() {
                 <div className={styles["link"]}>
                     <ul>
                         <li>
-                            <a href="/" target="_blank">
+                            <a
+                                href="https://github.com/baaaayh"
+                                target="_blank"
+                            >
                                 Github
                                 <Image
                                     src="/images/icons/icon_link.svg"
@@ -131,8 +149,11 @@ export default function Header() {
                             </a>
                         </li>
                         <li>
-                            <a href="/" target="_blank">
-                                Publishing
+                            <a
+                                href="https://portfolio-9590f.web.app/"
+                                target="_blank"
+                            >
+                                Prev Portfolio
                                 <Image
                                     src="/images/icons/icon_link.svg"
                                     width={18}
@@ -142,6 +163,12 @@ export default function Header() {
                             </a>
                         </li>
                     </ul>
+                </div>
+                <MobileMenu mobileMenuState={mobileMenuState} />
+                <div className="mob-menu mov">
+                    <button type="button" onClick={handleMobileMenu}>
+                        <span>MOBILE MENU</span>
+                    </button>
                 </div>
             </div>
         </header>

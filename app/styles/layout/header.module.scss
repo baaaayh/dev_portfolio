@@ -16,7 +16,9 @@
         padding: 0 20px;
     }
     &__logo {
-        padding-right: 40px;
+        position: relative;
+        flex: 1;
+        z-index: 1;
         a {
             display: flex;
             flex-direction: column;
@@ -33,9 +35,10 @@
 }
 
 .link {
+    flex: 1;
     ul {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         column-gap: 15px;
         li {
@@ -152,5 +155,28 @@
                 text-shadow: 1px 1px 12px hsla(0, 0%, 100%, 0.4);
             }
         }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__inner {
+            padding: 0 15px;
+        }
+        &__logo {
+            flex: none;
+        }
+    }
+    .gnb {
+        display: none;
+    }
+    .link {
+        display: none;
     }
 }
