@@ -168,6 +168,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+    canvas {
+        display: none;
+    }
     .pcv {
         display: none;
     }
