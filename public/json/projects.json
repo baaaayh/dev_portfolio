@@ -25,6 +25,20 @@
         "workers": 1,
         "period": "3일",
         "contribution": "100%",
-        "tools": ["Next.js", "TypeScript", "postgreSQL", "auth.js"]
+        "tools": ["Next.js", "TypeScript", "PostgreSQL", "Auth.js"]
+    },
+    {
+        "id": "BALMAIN",
+        "idx": 2,
+        "imageUrl": "/images/projects/balmain.png",
+        "title": "BALMAIN",
+        "type": ["반응형"],
+        "description": "PostgreSQL과 ZUSTAND를 사용해 BALMAIN 영문 사이트와 장바구니를 구현했습니다. 상품과 메뉴 모두 DB에서 데이터를 페칭하도록 했고, 서버/클라이언트 컴포넌트 중 서버 컴포넌트를 최대한 사용하도록 해 사용자 경험을 향상 시킬 수 있도록 했습니다. 또한 최적화, 구조 설계 등을 고려하여 이전 다노샵 쇼핑몰 작업물에서 보다 React.js 와 Next.js의 심화적인 부분을 학습할 수 있었습니다.",
+        "url": "https://balmain.vercel.app/",
+        "github": "https://github.com/baaaayh/balmain",
+        "workers": 1,
+        "period": "15일",
+        "contribution": "100%",
+        "tools": ["Next.js", "React.js", "TypeScript", "PostgreSQL", "Zustand"]
     }
 ]
