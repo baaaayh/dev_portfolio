@@ -42,7 +42,11 @@ export default function DetailPage() {
                         <li>
                             <h4>Description</h4>
                             <div className={styles["detail__content"]}>
-                                <p>{project.description}</p>
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: project.description,
+                                    }}
+                                ></p>
                             </div>
                         </li>
                         <li>
