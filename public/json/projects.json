@@ -52,7 +52,7 @@
     "id": "adminpage",
     "idx": 4,
     "imageUrl": "/images/projects/admin_with_tailwindcss.png",
-    "title": "Admin page",
+    "title": "ADMIN PAGE",
     "type": ["반응형", "클론코딩"],
     "description": "HTML, JavaScript, Tailwind CSS로 관리자(Admin) 페이지 UI를 구현한 프로젝트입니다.\nTailwind CSS를 @theme / @base / @layer / @apply 구조로 정리해 공통 스타일과 컴포넌트 스타일을 분리했고, CSS Grid 기반 사이드바 토글로 JavaScript 의존도를 최소화했습니다.\n반응형 환경에서도 레이아웃이 안정적으로 유지되도록 구조 설계에 집중했습니다.",
     "url": "https://baaaayh.github.io/admin-with-tailwindcss",
@@ -63,7 +63,7 @@
     "tools": ["HTML", "Tailwind CSS", "JavaScript"]
   },
   {
-    "id": "trello",
+    "id": "TRELLO",
     "idx": 5,
     "imageUrl": "/images/projects/trello.png",
     "title": "Trello",
