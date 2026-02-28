@@ -61,5 +61,26 @@
     "period": "2일",
     "contribution": "100%",
     "tools": ["HTML", "Tailwind CSS", "JavaScript"]
+  },
+  {
+    "id": "trello",
+    "idx": 5,
+    "imageUrl": "/images/projects/trello.png",
+    "title": "Trello",
+    "type": ["PC", "클론코딩"],
+    "description": "React와 Supabase를 기반으로 Trello의 핵심 기능을 구현한 프로젝트입니다.\nSupabase를 백엔드로 활용해 데이터 구조를 설계하고 Tanstack Query로 서버 상태를 관리하며 클라이언트-서버 간 동기화 흐름을 구성했습니다. 여기에 Supabase Realtime을 적용해 카드 이동 및 수정 사항이 즉시 반영되도록 구현함으로써 협업 환경에 가까운 사용자 경험을 구현했습니다.\n또한 Dnd-kit을 활용해 리스트와 카드 단위의 드래그 앤 드롭을 구성하고, 컨테이너 간 이동 및 정렬 시 position 값을 계산하는 로직을 설계했습니다.\nZustand는 로그인 세션 관리와 화면 분할(UI 상태) 관리에 한정해 사용하며 전역 상태의 책임을 분리했고, 인박스 이동 및 카드 재정렬 과정에서 발생하는 상태 불일치 문제를 개선하며 구조적 안정성을 높였습니다.",
+    "url": "https://trello-lime-tau.vercel.app/",
+    "github": "https://github.com/baaaayh/trello",
+    "workers": 1,
+    "period": "10일",
+    "contribution": "100%",
+    "tools": [
+      "React",
+      "Tanstack-Query",
+      "Supabase",
+      "Dnd-kit",
+      "Zustand",
+      "Tailwind CSS"
+    ]
   }
 ]
