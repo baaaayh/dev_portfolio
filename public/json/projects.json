@@ -76,9 +76,9 @@
     "contribution": "100%",
     "tools": [
       "React",
-      "Tanstack-Query",
-      "Supabase",
       "Dnd-kit",
+      "Supabase",
+      "Tanstack-Query",
       "Zustand",
       "Tailwind CSS"
     ]
