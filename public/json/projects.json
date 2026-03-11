@@ -5,13 +5,14 @@
     "imageUrl": "/images/projects/dano_shop.png",
     "title": "DANO SHOP",
     "type": ["반응형", "클론코딩"],
-    "description": "리액트와 Node.js, MongoDB를 활용해 구축한 풀스택 쇼핑몰 프로젝트입니다.\n초기에는 라즈베리파이를 활용한 자체 서버 환경에서 운영했으며, 이후 Supabase 기반의 클라우드 환경으로 마이그레이션하여 데이터 관리 안정성을 개선했습니다.\n장바구니, JWT 기반 인증, 주문 조회 및 결제 로직 등 쇼핑몰의 핵심 기능을 직접 구현하며 클라이언트-서버 간 데이터 흐름을 설계했습니다.\n로컬 서버 운영과 클라우드 이전 과정을 모두 경험하며 서비스 운영 관점에서의 구조 설계에 대해 고민해볼 수 있었습니다.",
+    "description": "리액트와 Node.js, MongoDB를 활용해 구축한 풀스택 쇼핑몰 프로젝트입니다. 초기에는 라즈베리파이를 활용한 자체 서버 환경에서 운영했으며, 이후 Supabase 기반의 클라우드 환경으로 마이그레이션하여 데이터 관리 안정성을 개선했습니다. 장바구니, JWT 기반 인증, 주문 조회 및 결제 로직 등 쇼핑몰의 핵심 기능을 직접 구현하며 클라이언트-서버 간 데이터 흐름을 설계했습니다. 로컬 서버 운영과 클라우드 이전 과정을 모두 경험하며 서비스 운영 관점에서의 구조 설계에 대해 고민해볼 수 있었습니다.",
+    "summary": "&bull; React + Node.js + MongoDB 기반 풀스택 쇼핑몰 구축\n&bull; JWT 기반 인증 및 장바구니/결제 기능 구현\n&bull; 로컬 서버 운영 → Supabase 환경으로 마이그레이션\n&bull; 클라이언트 - 서버 데이터 흐름 설계 및 구현",
     "url": "https://danoshop.vercel.app",
     "github": "https://github.com/baaaayh/danoshop",
     "workers": 1,
-    "period": "21일",
+    "period": "21 days",
     "contribution": "100%",
-    "tools": ["React.js", "Node.js", "MongoDB", "Redux"]
+    "skills": ["React", "Express.js", "MongoDB", "Redux"]
   },
   {
     "id": "BALMAIN",
@@ -19,13 +20,14 @@
     "imageUrl": "/images/projects/balmain.png",
     "title": "BALMAIN",
     "type": ["반응형"],
-    "description": "초기에는 라즈베리파이 기반의 로컬 PostgreSQL 환경에서 개발했으며, 이후 Supabase로 마이그레이션했습니다.\n상품, 메뉴, 카테고리를 정규화하여 독립적인 테이블로 분리했고, 데이터 일관성과 유지보수성을 고려해 스키마를 설계했습니다.\nZustand를 통한 상태 관리와 DB 패칭 구조를 설계하며 데이터 흐름을 정리했고, 서버 컴포넌트를 활용해 SSR의 장점을 프로젝트에 적용했습니다.",
+    "description": "초기에는 라즈베리파이 기반의 로컬 PostgreSQL 환경에서 개발했으며, 이후 Supabase로 마이그레이션했습니다. 상품, 메뉴, 카테고리를 정규화하여 독립적인 테이블로 분리했고, 데이터 일관성과 유지보수성을 고려해 스키마를 설계했습니다. Zustand를 통한 상태 관리와 DB 패칭 구조를 설계하며 데이터 흐름을 정리했습니다.",
+    "summary": "&bull; 로컬 PostgreSQL → Supabase 마이그레이션\n&bull; Zustand로 상태 관리 및 DB 패칭 구조 설계",
     "url": "https://balmain.vercel.app",
     "github": "https://github.com/baaaayh/balmain",
     "workers": 1,
-    "period": "15일",
+    "period": "15 days",
     "contribution": "100%",
-    "tools": ["Next.js", "React.js", "TypeScript", "PostgreSQL", "Zustand"]
+    "skills": ["Next.js", "React", "TypeScript", "Supabase", "Zustand"]
   },
   {
     "id": "instagram",
@@ -33,18 +35,19 @@
     "imageUrl": "/images/projects/instagram.png",
     "title": "INSTAGRAM",
     "type": ["반응형", "클론코딩"],
-    "description": "Tanstack Query와 Zustand를 활용해 클라이언트-서버 간 데이터 동기화를 구현한 프로젝트입니다.\nSupabase를 백엔드로 사용해 JWT 기반 Access/Refresh Token 인증 로직을 구축했으며, 이미지 업로드 및 피드 기능을 구현했습니다.\nTanstack Query의 캐싱 전략과 로딩 상태 관리를 적용하며 사용자 경험을 고려한 데이터 처리 방식을 설계했습니다.",
+    "description": "Tanstack Query와 Zustand를 활용해 클라이언트 - 서버 상태 동기화를 구현한 프로젝트입니다. 초기에는 별도의 백엔드 서버와 이미지 서버를 운영했으며, 이후 Supabase로 마이그레이션하여 백엔드와 스토리지를 통합했습니다. JWT 기반 Access/Refresh Token 인증 로직을 구축했고, 이미지 업로드, 피드, 좋아요, 댓글 등 주요 기능을 구현했습니다. 좋아요 기능에는 낙관적 업데이트를 적용하여 UI 반응성을 개선했고, 서버 상태와 클라이언트 캐시를 효율적으로 관리했습니다.",
+    "summary": "&bull; Tanstack Query + Zustand 기반 데이터 동기화 구현\n&bull; JWT Access/Refresh Token 인증 로직 구축\n&bull; 이미지 업로드, 피드, 좋아요, 댓글 기능 구현\n&bull; 초기 백엔드 + 이미지 서버 운영 → Supabase로 백엔드와 스토리지 통합 마이그레이션\n&bull; 좋아요 기능 낙관적 업데이트 적용, 댓글 서버 상태 동기화",
     "url": "https://instagram-murex-theta.vercel.app",
     "github": "https://github.com/baaaayh/instagram",
     "workers": 1,
-    "period": "10일",
+    "period": "10 days",
     "contribution": "100%",
-    "tools": [
-      "Tanstack-Query",
-      "Node.js",
-      "React.js",
+    "skills": [
+      "React",
       "TypeScript",
-      "PostgreSQL",
+      "Tanstack Query",
+      "Supabase",
+      "Express.js",
       "Zustand"
     ]
   },
@@ -54,13 +57,14 @@
     "imageUrl": "/images/projects/admin_with_tailwindcss.png",
     "title": "ADMIN PAGE",
     "type": ["반응형", "클론코딩"],
-    "description": "HTML, JavaScript, Tailwind CSS로 관리자(Admin) 페이지 UI를 구현한 프로젝트입니다.\nTailwind CSS를 @theme / @base / @layer / @apply 구조로 정리해 공통 스타일과 컴포넌트 스타일을 분리했고, CSS Grid 기반 사이드바 토글로 JavaScript 의존도를 최소화했습니다.\n반응형 환경에서도 레이아웃이 안정적으로 유지되도록 구조 설계에 집중했습니다.",
+    "description": "HTML, JavaScript, Tailwind CSS로 관리자(Admin) 페이지 UI를 구현한 프로젝트입니다. Tailwind CSS를 @theme / @base / @layer / @apply 구조로 정리해 공통 스타일과 컴포넌트 스타일을 분리했고, CSS Grid 기반 사이드바 토글로 JavaScript 의존도를 최소화했습니다. 반응형 환경에서도 레이아웃이 안정적으로 유지되도록 구조 설계에 집중했습니다.",
+    "summary": "&bull; HTML + JavaScript + Tailwind CSS 기반 관리자 페이지 구현\n&bull; Tailwind CSS 구조화(@theme, @base, @layer, @apply)로 공통/컴포넌트 스타일 분리\n&bull; CSS Grid 사이드바 토글 구현으로 JS 의존도 최소화\n&bull; 반응형 레이아웃 안정화 및 UI 구조 설계",
     "url": "https://baaaayh.github.io/admin-with-tailwindcss",
     "github": "https://github.com/baaaayh/admin-with-tailwindcss",
     "workers": 1,
-    "period": "2일",
+    "period": "2 days",
     "contribution": "100%",
-    "tools": ["HTML", "Tailwind CSS", "JavaScript"]
+    "skills": ["HTML", "Tailwind CSS", "JavaScript"]
   },
   {
     "id": "Trello",
@@ -68,17 +72,19 @@
     "imageUrl": "/images/projects/trello.png",
     "title": "TRELLO",
     "type": ["PC", "클론코딩"],
-    "description": "React와 Supabase를 기반으로 Trello의 핵심 기능을 구현한 프로젝트입니다.\nSupabase를 백엔드로 활용해 데이터 구조를 설계하고 Tanstack Query로 서버 상태를 관리하며 클라이언트-서버 간 동기화 흐름을 구성했습니다. 여기에 Supabase Realtime을 적용해 카드 이동 및 수정 사항이 즉시 반영되도록 구현함으로써 협업 환경에 가까운 사용자 경험을 구현했습니다.\n또한 Dnd-kit을 활용해 리스트와 카드 단위의 드래그 앤 드롭을 구성하고, 컨테이너 간 이동 및 정렬 시 position 값을 계산하는 로직을 설계했습니다.\nZustand는 로그인 세션 관리와 화면 분할(UI 상태) 관리에 한정해 사용하며 전역 상태의 책임을 분리했고, 인박스 이동 및 카드 재정렬 과정에서 발생하는 상태 불일치 문제를 개선하며 구조적 안정성을 높였습니다.",
+    "description": "React와 Supabase를 기반으로 Trello 핵심 기능을 구현한 PC 클론코딩 프로젝트입니다. 카드/리스트 이동, 실시간 데이터 동기화, 상태 관리 등 프론트엔드 구조와 데이터 흐름 설계에 중점을 두었습니다. 서버 데이터를 우선 조회하고 화면 렌더링은 로컬 상태(State)를 사용하여 안정적이고 빠른 UI를 구현했습니다.",
+    "summary": "&bull; React + Supabase 기반 Trello 핵심 기능 구현\n&bull; Supabase Realtime으로 카드 이동&middot;수정 즉시 반영\n&bull; 서버 데이터를 우선 조회 후 Tanstack Query 캐시에 반영, 화면 렌더링은 로컬 상태(State) 사용\n&bull; Dnd-kit 활용 리스트&middot;카드 드래그 앤 드롭 구현, position 계산 로직 설계\n&bull; Zustand로 로그인 세션 및 분할 레이아웃 UI 상태 관리\n&bull; Tailwind CSS 사용",
+    "troubleShooting": "&bull; 카드/리스트 이동 시 발생할 수 있는 position 불일치 문제 해결을 위해 로직 통일\n&bull; 서버 캐시와 화면 상태를 분리하여 데이터 동기화 문제 최소화",
     "url": "https://trello-lime-tau.vercel.app/",
     "github": "https://github.com/baaaayh/trello",
     "workers": 1,
-    "period": "10일",
+    "period": "10 days",
     "contribution": "100%",
-    "tools": [
+    "skills": [
       "React",
       "Dnd-kit",
+      "Tanstack Query",
       "Supabase",
-      "Tanstack-Query",
       "Zustand",
       "Tailwind CSS"
     ]
